@@ -1,4 +1,4 @@
-package yapps.gallery.Services;
+package yapps.gallery;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -7,15 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
-import yapps.gallery.ImageRow;
-import yapps.gallery.R;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.myViewHolder>
 {
