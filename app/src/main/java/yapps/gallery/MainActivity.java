@@ -7,15 +7,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
-import yapps.gallery.Services.AsyncRequestImages;
-import yapps.gallery.Services.ServiceHandler;
 
-public class MainActivity extends AppCompatActivity implements ServiceHandler.ServiceResponse
+
+import yapps.gallery.Services.BackgroundRequest;
+import yapps.gallery.Services.ResponseListener;
+
+public class MainActivity extends AppCompatActivity implements ResponseListener
 {
     RecyclerView RV;
     Button BTNgetImages;
     ImageAdapter IA;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements ServiceHandler.Se
     {
         BTNgetImages.setClickable(false);
         BTNgetImages.setVisibility(View.GONE);
-        AsyncRequestImages request = new AsyncRequestImages();
+        BackgroundRequest request = new BackgroundRequest();
         request.delegate = MainActivity.this;
         request.execute();
     }
@@ -49,7 +50,8 @@ public class MainActivity extends AppCompatActivity implements ServiceHandler.Se
     @Override
     public void getResult(Data data)
     {
-
+        IA.images.addAll(data.getImages());
+        IA.notifyDataSetChanged();
     }
 
 }

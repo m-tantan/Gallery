@@ -8,152 +8,70 @@ import com.google.gson.annotations.SerializedName;
 public class Image {
 
     @SerializedName("account_id")
-    private String mAccountId;
+    private Object mAccountId;
     @SerializedName("account_url")
-    private String mAccountUrl;
-    @SerializedName("adConfig")
-    private AdConfig mAdConfig;
+    private Object mAccountUrl;
     @SerializedName("ad_type")
     private Long mAdType;
     @SerializedName("ad_url")
     private String mAdUrl;
-    @SerializedName("album_cover")
-    private String mAlbumCover;
-    @SerializedName("album_cover_height")
-    private Long mAlbumCoverHeight;
-    @SerializedName("album_cover_width")
-    private Long mAlbumCoverWidth;
-    @SerializedName("album_images")
-    private AlbumImages mAlbumImages;
-    @SerializedName("album_layout")
-    private String mAlbumLayout;
-    @SerializedName("album_privacy")
-    private String mAlbumPrivacy;
     @SerializedName("animated")
     private Boolean mAnimated;
     @SerializedName("bandwidth")
-    private Object mBandwidth;
-    @SerializedName("comment_count")
-    private Long mCommentCount;
+    private Long mBandwidth;
     @SerializedName("datetime")
-    private String mDatetime;
+    private Long mDatetime;
     @SerializedName("description")
-    private String mDescription;
-    @SerializedName("downs")
-    private Long mDowns;
-    @SerializedName("ext")
-    private String mExt;
-    @SerializedName("favorite_count")
-    private Long mFavoriteCount;
-    @SerializedName("favorited")
-    private Boolean mFavorited;
-    @SerializedName("gallery_datetime")
-    private String mGalleryDatetime;
-    @SerializedName("galleryTags")
-    private List<GalleryTag> mGalleryTags;
+    private Object mDescription;
+    @SerializedName("favorite")
+    private Boolean mFavorite;
     @SerializedName("has_sound")
     private Boolean mHasSound;
-    @SerializedName("hash")
-    private String mHash;
     @SerializedName("height")
     private Long mHeight;
-    @SerializedName("hot_datetime")
-    private String mHotDatetime;
     @SerializedName("id")
-    private Long mId;
+    private String mId;
     @SerializedName("in_gallery")
     private Boolean mInGallery;
-    @SerializedName("is_album")
-    private Boolean mIsAlbum;
-    @SerializedName("is_hot")
-    private Boolean mIsHot;
-    @SerializedName("looping")
-    private Boolean mLooping;
-    @SerializedName("meme_bottom")
-    private Object mMemeBottom;
-    @SerializedName("meme_name")
-    private Object mMemeName;
-    @SerializedName("meme_top")
-    private Object mMemeTop;
-    @SerializedName("mimetype")
-    private Object mMimetype;
+    @SerializedName("in_most_viral")
+    private Boolean mInMostViral;
+    @SerializedName("is_ad")
+    private Boolean mIsAd;
+    @SerializedName("link")
+    private String mLink;
     @SerializedName("nsfw")
-    private Boolean mNsfw;
-    @SerializedName("num_images")
-    private Long mNumImages;
-    @SerializedName("pending")
-    private String mPending;
-    @SerializedName("platform")
-    private String mPlatform;
-    @SerializedName("points")
-    private Long mPoints;
-    @SerializedName("prefer_video")
-    private Boolean mPreferVideo;
-    @SerializedName("readonly")
-    private Boolean mReadonly;
-    @SerializedName("reddit")
-    private String mReddit;
-    @SerializedName("score")
-    private Long mScore;
+    private Object mNsfw;
     @SerializedName("section")
-    private String mSection;
+    private Object mSection;
     @SerializedName("size")
     private Long mSize;
-    @SerializedName("spam")
-    private String mSpam;
-    @SerializedName("starting_score")
-    private Long mStartingScore;
-    @SerializedName("subtype")
-    private String mSubtype;
     @SerializedName("tags")
-    private List<String> mTags;
-    @SerializedName("timestamp")
-    private String mTimestamp;
+    private List<Object> mTags;
     @SerializedName("title")
-    private String mTitle;
-    @SerializedName("topic")
-    private String mTopic;
-    @SerializedName("topic_id")
-    private Long mTopicId;
-    @SerializedName("ups")
-    private Long mUps;
-    @SerializedName("video_host")
-    private Object mVideoHost;
-    @SerializedName("video_source")
-    private Object mVideoSource;
+    private Object mTitle;
+    @SerializedName("type")
+    private String mType;
     @SerializedName("views")
-    private String mViews;
-    @SerializedName("virality")
-    private Double mVirality;
+    private Long mViews;
     @SerializedName("vote")
     private Object mVote;
-    @SerializedName("weight")
-    private Long mWeight;
     @SerializedName("width")
     private Long mWidth;
 
-    public String getAccountId() {
+    public Object getAccountId() {
         return mAccountId;
     }
 
-    public void setAccountId(String accountId) {
+    public void setAccountId(Object accountId) {
         mAccountId = accountId;
     }
 
-    public String getAccountUrl() {
+    public Object getAccountUrl() {
         return mAccountUrl;
     }
 
-    public void setAccountUrl(String accountUrl) {
+    public void setAccountUrl(Object accountUrl) {
         mAccountUrl = accountUrl;
-    }
-
-    public AdConfig getAdConfig() {
-        return mAdConfig;
-    }
-
-    public void setAdConfig(AdConfig adConfig) {
-        mAdConfig = adConfig;
     }
 
     public Long getAdType() {
@@ -172,54 +90,6 @@ public class Image {
         mAdUrl = adUrl;
     }
 
-    public String getAlbumCover() {
-        return mAlbumCover;
-    }
-
-    public void setAlbumCover(String albumCover) {
-        mAlbumCover = albumCover;
-    }
-
-    public Long getAlbumCoverHeight() {
-        return mAlbumCoverHeight;
-    }
-
-    public void setAlbumCoverHeight(Long albumCoverHeight) {
-        mAlbumCoverHeight = albumCoverHeight;
-    }
-
-    public Long getAlbumCoverWidth() {
-        return mAlbumCoverWidth;
-    }
-
-    public void setAlbumCoverWidth(Long albumCoverWidth) {
-        mAlbumCoverWidth = albumCoverWidth;
-    }
-
-    public AlbumImages getAlbumImages() {
-        return mAlbumImages;
-    }
-
-    public void setAlbumImages(AlbumImages albumImages) {
-        mAlbumImages = albumImages;
-    }
-
-    public String getAlbumLayout() {
-        return mAlbumLayout;
-    }
-
-    public void setAlbumLayout(String albumLayout) {
-        mAlbumLayout = albumLayout;
-    }
-
-    public String getAlbumPrivacy() {
-        return mAlbumPrivacy;
-    }
-
-    public void setAlbumPrivacy(String albumPrivacy) {
-        mAlbumPrivacy = albumPrivacy;
-    }
-
     public Boolean getAnimated() {
         return mAnimated;
     }
@@ -228,84 +98,36 @@ public class Image {
         mAnimated = animated;
     }
 
-    public Object getBandwidth() {
+    public Long getBandwidth() {
         return mBandwidth;
     }
 
-    public void setBandwidth(Object bandwidth) {
+    public void setBandwidth(Long bandwidth) {
         mBandwidth = bandwidth;
     }
 
-    public Long getCommentCount() {
-        return mCommentCount;
-    }
-
-    public void setCommentCount(Long commentCount) {
-        mCommentCount = commentCount;
-    }
-
-    public String getDatetime() {
+    public Long getDatetime() {
         return mDatetime;
     }
 
-    public void setDatetime(String datetime) {
+    public void setDatetime(Long datetime) {
         mDatetime = datetime;
     }
 
-    public String getDescription() {
+    public Object getDescription() {
         return mDescription;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(Object description) {
         mDescription = description;
     }
 
-    public Long getDowns() {
-        return mDowns;
+    public Boolean getFavorite() {
+        return mFavorite;
     }
 
-    public void setDowns(Long downs) {
-        mDowns = downs;
-    }
-
-    public String getExt() {
-        return mExt;
-    }
-
-    public void setExt(String ext) {
-        mExt = ext;
-    }
-
-    public Long getFavoriteCount() {
-        return mFavoriteCount;
-    }
-
-    public void setFavoriteCount(Long favoriteCount) {
-        mFavoriteCount = favoriteCount;
-    }
-
-    public Boolean getFavorited() {
-        return mFavorited;
-    }
-
-    public void setFavorited(Boolean favorited) {
-        mFavorited = favorited;
-    }
-
-    public String getGalleryDatetime() {
-        return mGalleryDatetime;
-    }
-
-    public void setGalleryDatetime(String galleryDatetime) {
-        mGalleryDatetime = galleryDatetime;
-    }
-
-    public List<GalleryTag> getGalleryTags() {
-        return mGalleryTags;
-    }
-
-    public void setGalleryTags(List<GalleryTag> galleryTags) {
-        mGalleryTags = galleryTags;
+    public void setFavorite(Boolean favorite) {
+        mFavorite = favorite;
     }
 
     public Boolean getHasSound() {
@@ -316,14 +138,6 @@ public class Image {
         mHasSound = hasSound;
     }
 
-    public String getHash() {
-        return mHash;
-    }
-
-    public void setHash(String hash) {
-        mHash = hash;
-    }
-
     public Long getHeight() {
         return mHeight;
     }
@@ -332,19 +146,11 @@ public class Image {
         mHeight = height;
     }
 
-    public String getHotDatetime() {
-        return mHotDatetime;
-    }
-
-    public void setHotDatetime(String hotDatetime) {
-        mHotDatetime = hotDatetime;
-    }
-
-    public Long getId() {
+    public String getId() {
         return mId;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         mId = id;
     }
 
@@ -356,139 +162,43 @@ public class Image {
         mInGallery = inGallery;
     }
 
-    public Boolean getIsAlbum() {
-        return mIsAlbum;
+    public Boolean getInMostViral() {
+        return mInMostViral;
     }
 
-    public void setIsAlbum(Boolean isAlbum) {
-        mIsAlbum = isAlbum;
+    public void setInMostViral(Boolean inMostViral) {
+        mInMostViral = inMostViral;
     }
 
-    public Boolean getIsHot() {
-        return mIsHot;
+    public Boolean getIsAd() {
+        return mIsAd;
     }
 
-    public void setIsHot(Boolean isHot) {
-        mIsHot = isHot;
+    public void setIsAd(Boolean isAd) {
+        mIsAd = isAd;
     }
 
-    public Boolean getLooping() {
-        return mLooping;
+    public String getLink() {
+        return mLink;
     }
 
-    public void setLooping(Boolean looping) {
-        mLooping = looping;
+    public void setLink(String link) {
+        mLink = link;
     }
 
-    public Object getMemeBottom() {
-        return mMemeBottom;
-    }
-
-    public void setMemeBottom(Object memeBottom) {
-        mMemeBottom = memeBottom;
-    }
-
-    public Object getMemeName() {
-        return mMemeName;
-    }
-
-    public void setMemeName(Object memeName) {
-        mMemeName = memeName;
-    }
-
-    public Object getMemeTop() {
-        return mMemeTop;
-    }
-
-    public void setMemeTop(Object memeTop) {
-        mMemeTop = memeTop;
-    }
-
-    public Object getMimetype() {
-        return mMimetype;
-    }
-
-    public void setMimetype(Object mimetype) {
-        mMimetype = mimetype;
-    }
-
-    public Boolean getNsfw() {
+    public Object getNsfw() {
         return mNsfw;
     }
 
-    public void setNsfw(Boolean nsfw) {
+    public void setNsfw(Object nsfw) {
         mNsfw = nsfw;
     }
 
-    public Long getNumImages() {
-        return mNumImages;
-    }
-
-    public void setNumImages(Long numImages) {
-        mNumImages = numImages;
-    }
-
-    public String getPending() {
-        return mPending;
-    }
-
-    public void setPending(String pending) {
-        mPending = pending;
-    }
-
-    public String getPlatform() {
-        return mPlatform;
-    }
-
-    public void setPlatform(String platform) {
-        mPlatform = platform;
-    }
-
-    public Long getPoints() {
-        return mPoints;
-    }
-
-    public void setPoints(Long points) {
-        mPoints = points;
-    }
-
-    public Boolean getPreferVideo() {
-        return mPreferVideo;
-    }
-
-    public void setPreferVideo(Boolean preferVideo) {
-        mPreferVideo = preferVideo;
-    }
-
-    public Boolean getReadonly() {
-        return mReadonly;
-    }
-
-    public void setReadonly(Boolean readonly) {
-        mReadonly = readonly;
-    }
-
-    public String getReddit() {
-        return mReddit;
-    }
-
-    public void setReddit(String reddit) {
-        mReddit = reddit;
-    }
-
-    public Long getScore() {
-        return mScore;
-    }
-
-    public void setScore(Long score) {
-        mScore = score;
-    }
-
-    public String getSection() {
+    public Object getSection() {
         return mSection;
     }
 
-    public void setSection(String section) {
+    public void setSection(Object section) {
         mSection = section;
     }
 
@@ -500,108 +210,36 @@ public class Image {
         mSize = size;
     }
 
-    public String getSpam() {
-        return mSpam;
-    }
-
-    public void setSpam(String spam) {
-        mSpam = spam;
-    }
-
-    public Long getStartingScore() {
-        return mStartingScore;
-    }
-
-    public void setStartingScore(Long startingScore) {
-        mStartingScore = startingScore;
-    }
-
-    public String getSubtype() {
-        return mSubtype;
-    }
-
-    public void setSubtype(String subtype) {
-        mSubtype = subtype;
-    }
-
-    public List<String> getTags() {
+    public List<Object> getTags() {
         return mTags;
     }
 
-    public void setTags(List<String> tags) {
+    public void setTags(List<Object> tags) {
         mTags = tags;
     }
 
-    public String getTimestamp() {
-        return mTimestamp;
-    }
-
-    public void setTimestamp(String timestamp) {
-        mTimestamp = timestamp;
-    }
-
-    public String getTitle() {
+    public Object getTitle() {
         return mTitle;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(Object title) {
         mTitle = title;
     }
 
-    public String getTopic() {
-        return mTopic;
+    public String getType() {
+        return mType;
     }
 
-    public void setTopic(String topic) {
-        mTopic = topic;
+    public void setType(String type) {
+        mType = type;
     }
 
-    public Long getTopicId() {
-        return mTopicId;
-    }
-
-    public void setTopicId(Long topicId) {
-        mTopicId = topicId;
-    }
-
-    public Long getUps() {
-        return mUps;
-    }
-
-    public void setUps(Long ups) {
-        mUps = ups;
-    }
-
-    public Object getVideoHost() {
-        return mVideoHost;
-    }
-
-    public void setVideoHost(Object videoHost) {
-        mVideoHost = videoHost;
-    }
-
-    public Object getVideoSource() {
-        return mVideoSource;
-    }
-
-    public void setVideoSource(Object videoSource) {
-        mVideoSource = videoSource;
-    }
-
-    public String getViews() {
+    public Long getViews() {
         return mViews;
     }
 
-    public void setViews(String views) {
+    public void setViews(Long views) {
         mViews = views;
-    }
-
-    public Double getVirality() {
-        return mVirality;
-    }
-
-    public void setVirality(Double virality) {
-        mVirality = virality;
     }
 
     public Object getVote() {
@@ -610,14 +248,6 @@ public class Image {
 
     public void setVote(Object vote) {
         mVote = vote;
-    }
-
-    public Long getWeight() {
-        return mWeight;
-    }
-
-    public void setWeight(Long weight) {
-        mWeight = weight;
     }
 
     public Long getWidth() {
